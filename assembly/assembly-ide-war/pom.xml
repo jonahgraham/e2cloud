@@ -14,13 +14,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>che-assembly-parent</artifactId>
-        <groupId>org.eclipse.che</groupId>
-        <version>5.3.1</version>
+        <artifactId>e2cloud-assembly-parent</artifactId>
+        <groupId>com.renesas.e2cloud</groupId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>assembly-ide-war</artifactId>
     <packaging>war</packaging>
-    <name>Che IDE :: Compiling GWT Application</name>
+    <name>e2cloud IDE :: Compiling GWT Application</name>
     <properties>
         <generated.sources.directory>${project.build.directory}/generated-sources/gen</generated.sources.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -390,7 +390,7 @@
             <plugin>
                 <groupId>org.eclipse.che.core</groupId>
                 <artifactId>che-core-dyna-provider-generator-maven-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${che.version}</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>

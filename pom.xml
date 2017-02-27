@@ -20,7 +20,7 @@
         <version>5.3.0</version>
     </parent>
     <groupId>com.renesas.e2cloud</groupId>
-    <artifactId>e2clouse-ide-parent</artifactId>
+    <artifactId>e2cloud-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>

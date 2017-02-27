@@ -14,16 +14,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>che-parent</artifactId>
-        <groupId>org.eclipse.che</groupId>
-        <version>5.3.1</version>
+        <artifactId>e2cloud-parent</artifactId>
+        <groupId>com.renesas.e2cloud</groupId>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>org.eclipse.che</groupId>
-    <artifactId>che-assembly-parent</artifactId>
-    <version>5.3.1</version>
+    <groupId>com.renesas.e2cloud</groupId>
+    <artifactId>e2cloud-assembly-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Che IDE :: Parent</name>
+    <name>e2cloud IDE :: Assemblies parent</name>
     <modules>
         <module>assembly-wsagent-war</module>
         <module>assembly-wsagent-server</module>
