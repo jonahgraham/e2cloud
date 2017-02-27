@@ -14,26 +14,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>che-assembly-parent</artifactId>
-        <groupId>org.eclipse.che</groupId>
-        <version>5.3.1</version>
+        <artifactId>e2cloud-assembly-parent</artifactId>
+        <groupId>com.renesas.e2cloud</groupId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>assembly-main</artifactId>
     <packaging>pom</packaging>
-    <name>Che IDE :: Assemblies Tomcat</name>
+    <name>e2cloud IDE :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <groupId>com.renesas.e2cloud</groupId>
             <artifactId>assembly-ide-war</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <groupId>com.renesas.e2cloud</groupId>
             <artifactId>assembly-wsagent-server</artifactId>
             <type>tar.gz</type>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <groupId>com.renesas.e2cloud</groupId>
             <artifactId>assembly-wsmaster-war</artifactId>
             <type>war</type>
         </dependency>
@@ -126,7 +126,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <updateOnly>false</updateOnly>
                     <descriptor>${project.basedir}/src/assembly/assembly.xml</descriptor>
-                    <finalName>eclipse-che-${project.version}</finalName>
+                    <finalName>e2cloud-${project.version}</finalName>
                     <tarLongFileMode>posix</tarLongFileMode>
                 </configuration>
             </plugin>
