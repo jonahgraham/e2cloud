@@ -30,6 +30,7 @@ public class WsAgentAnalyticsAddresser {
 
     @ScheduleRate(period = 1, unit = TimeUnit.HOURS)
     void send() {
+/* TODO - analytics????
         HttpURLConnection connection = null;
         try {
             final URL url = new URL("https://install.codenvycorp.com/che/init/workspace?id=" + ID);
@@ -42,5 +43,6 @@ public class WsAgentAnalyticsAddresser {
                 connection.disconnect();
             }
         }
+*/
     }
 }
