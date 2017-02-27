@@ -101,4 +101,17 @@
             <url>https://maven.codenvycorp.com/content/repositories/codenvy-public-snapshots/</url>
         </pluginRepository>
     </pluginRepositories>
+    <profiles>
+        <!-- Profile for building Che faster by skipping unit tests, license checks and other enforcement features -->
+        <profile>
+            <id>fast</id>
+            <properties>
+                <findbugs.skip>true</findbugs.skip>
+                <!-- Fails? gwt.compiler.localWorkers>2 -T 1C</gwt.compiler.localWorkers -->
+                <license.skip>true</license.skip>
+                <mdep.analyze.skip>true</mdep.analyze.skip>
+                <skipTests>true</skipTests>
+            </properties>
+        </profile>
+    </profiles>
 </project>
