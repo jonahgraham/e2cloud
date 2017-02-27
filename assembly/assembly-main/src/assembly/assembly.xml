@@ -118,28 +118,8 @@
                 <include>ch.qos.logback:logback-core</include>
             </includes>
         </dependencySet>
-        <dependencySet>
-            <useProjectArtifact>false</useProjectArtifact>
-            <unpack>true</unpack>
-            <outputDirectory>templates</outputDirectory>
-            <includes>
-                <include>org.eclipse.che.core:che-core-ide-templates</include>
-            </includes>
-            <unpackOptions>
-                <excludes>
-                    <exclude>META-INF/**</exclude>
-                </excludes>
-            </unpackOptions>
-        </dependencySet>
     </dependencySets>
     <fileSets>
-        <fileSet>
-            <directory>${project.build.directory}/stacks/</directory>
-            <outputDirectory>stacks/</outputDirectory>
-            <excludes>
-                <exclude>META-INF/**</exclude>
-            </excludes>
-        </fileSet>
         <fileSet>
             <directory>${project.build.directory}/dependency/</directory>
             <outputDirectory>tomcat/</outputDirectory>
@@ -156,8 +136,20 @@
             <outputDirectory>plugins</outputDirectory>
         </fileSet>
         <fileSet>
+            <directory>${project.basedir}/src/assembly/templates</directory>
+            <outputDirectory>templates</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/assembly/stacks</directory>
+            <outputDirectory>stacks</outputDirectory>
+        </fileSet>
+        <fileSet>
             <directory>${project.basedir}/src/assembly/webapps</directory>
             <outputDirectory>tomcat/webapps</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${project.basedir}/src/assembly/assets</directory>
+            <outputDirectory>tomcat/webapps/dashboard/assets</outputDirectory>
         </fileSet>
         <fileSet>
             <directory>${project.parent.basedir}/assembly-wsmaster-war/src/main/webapp/WEB-INF/classes/codenvy</directory>
