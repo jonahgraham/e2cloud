@@ -1,0 +1,13 @@
+{
+  "title": "e2cloud ",
+  "name": "e2cloud",
+  "logoFile": "e2cloud-logo.svg",
+  "logoTextFile": "e2cloud-text.svg",
+  "favicon": "favicon.ico",
+  "loader": "intro-Renesas_blue.png",
+  "ideResources": "/_app/",
+  "helpPath": "https://www.renesas.com/che/",
+  "helpTitle": "Renesas Support",
+  "supportEmail": "che@renesas.com",
+  "oauthDocs": "Configure OAuth in the che.properties file."
+}
