@@ -1,0 +1,125 @@
+[
+  {
+    "id": "artik-default",
+    "creator": "ide",
+    "name": "Artik",
+    "description": "Artik Development Stack",
+    "scope": "general",
+    "tags": [
+      "Fedora 24",
+      "Artik",
+      "gnueabi-toolchain",
+      "gdb"
+    ],
+    "components": [
+    ],
+    "source": {
+      "type": "image",
+      "origin": "codenvy/artik"
+    },
+    "workspaceConfig": {
+      "environments": {
+        "default": {
+          "machines": {
+            "dev-machine": {
+              "agents": [
+                "org.eclipse.che.terminal",
+                "org.eclipse.che.ws-agent",
+                "org.eclipse.che.ssh"
+              ],
+              "servers": {},
+              "attributes": {
+                "memoryLimitBytes": "2147483648"
+              }
+            }
+          },
+          "recipe": {
+            "location": "codenvy/artik",
+            "type": "dockerimage"
+          }
+        }
+      },
+      "name": "default",
+      "defaultEnv": "default",
+      "description": null,
+      "commands": [
+        {
+          "commandLine": "journalctl --since today",
+          "name": "tail logs",
+          "type": "custom"
+        }
+      ]
+    },
+    "stackIcon": {
+      "name": "type-artik.svg",
+      "mediaType": "image/svg+xml"
+    }
+  },
+  {
+    "id": "android-default",
+    "creator": "ide",
+    "name": "Android",
+    "description": "Default Android Stack with Java 1.8, Maven 3.2.3, Android (21 api level).",
+    "scope": "general",
+    "tags": [
+      "Android",
+      "Ubuntu",
+      "Git"
+    ],
+    "components": [
+      {
+        "name": "Android",
+        "version": "21"
+      },
+      {
+        "name": "Java",
+        "version": "1.8"
+      },
+      {
+        "name": "Maven",
+        "version": "3.2.3"
+      }
+    ],
+    "source": {
+      "type": "image",
+      "origin": "codenvy/ubuntu_android"
+    },
+    "workspaceConfig": {
+      "environments": {
+        "default": {
+          "machines": {
+            "dev-machine": {
+              "agents": [
+                "org.eclipse.che.terminal",
+                "org.eclipse.che.ws-agent",
+                "org.eclipse.che.ssh"
+              ],
+              "servers": {},
+              "attributes": {
+                "memoryLimitBytes": "2147483648"
+              }
+            }
+          },
+          "recipe": {
+            "location": "codenvy/ubuntu_android",
+            "type": "dockerimage"
+          }
+        }
+      },
+      "name": "default",
+      "defaultEnv": "default",
+      "description": null,
+      "commands": [
+        {
+          "commandLine": "mvn clean install -f ${current.project.path}",
+          "name": "build",
+          "type": "mvn"
+        }
+      ]
+    },
+    "stackIcon": {
+      "name": "type-android.svg",
+      "mediaType": "image/svg+xml"
+    }
+  }
+]
