@@ -18,7 +18,7 @@
         <groupId>com.renesas.e2cloud</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>assembly-wsagent-war</artifactId>
+    <artifactId>e2cloud-assembly-wsagent-war</artifactId>
     <packaging>war</packaging>
     <name>e2cloud Workspace Agent War Packaging</name>
     <dependencies>

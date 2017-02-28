@@ -34,30 +34,30 @@
         <dependencies>
             <dependency>
                 <groupId>com.renesas.e2cloud</groupId>
-                <artifactId>assembly-ide-war</artifactId>
+                <artifactId>e2cloud-assembly-ide-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
                 <groupId>com.renesas.e2cloud</groupId>
-                <artifactId>assembly-main</artifactId>
+                <artifactId>e2cloud-assembly-main</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.renesas.e2cloud</groupId>
-                <artifactId>assembly-wsagent-server</artifactId>
+                <artifactId>e2cloud-assembly-wsagent-server</artifactId>
                 <version>${project.version}</version>
                 <type>tar.gz</type>
             </dependency>
             <dependency>
                 <groupId>com.renesas.e2cloud</groupId>
-                <artifactId>assembly-wsagent-war</artifactId>
+                <artifactId>e2cloud-assembly-wsagent-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
                 <groupId>com.renesas.e2cloud</groupId>
-                <artifactId>assembly-wsmaster-war</artifactId>
+                <artifactId>e2cloud-assembly-wsmaster-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>

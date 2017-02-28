@@ -34,7 +34,7 @@
             <outputDirectory>tomcat/webapps</outputDirectory>
             <outputFileNameMapping>ROOT.war</outputFileNameMapping>
             <includes>
-                <include>com.renesas.e2cloud:assembly-ide-war</include>
+                <include>com.renesas.e2cloud:e2cloud-assembly-ide-war</include>
             </includes>
         </dependencySet>
         <dependencySet>
@@ -43,7 +43,7 @@
             <outputDirectory>tomcat/webapps</outputDirectory>
             <outputFileNameMapping>wsmaster.war</outputFileNameMapping>
             <includes>
-                <include>com.renesas.e2cloud:assembly-wsmaster-war</include>
+                <include>com.renesas.e2cloud:e2cloud-assembly-wsmaster-war</include>
             </includes>
         </dependencySet>
         <dependencySet>
@@ -75,7 +75,7 @@
             <outputDirectory>lib</outputDirectory>
             <outputFileNameMapping>ws-agent.tar.gz</outputFileNameMapping>
             <includes>
-                <include>com.renesas.e2cloud:assembly-wsagent-server</include>
+                <include>com.renesas.e2cloud:e2cloud-assembly-wsagent-server</include>
             </includes>
         </dependencySet>
         <dependencySet>
@@ -169,15 +169,15 @@
            </includes>
         </fileSet>
         <fileSet>
-            <directory>${project.parent.basedir}/assembly-wsagent-war</directory>
-            <outputDirectory>sdk/assembly-wsagent-war</outputDirectory>
+            <directory>${project.parent.basedir}/e2cloud-assembly-wsagent-war</directory>
+            <outputDirectory>sdk/e2cloud-assembly-wsagent-war</outputDirectory>
             <excludes>
             <exclude>**/target/**</exclude>
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>${project.parent.basedir}/assembly-wsagent-server</directory>
-            <outputDirectory>sdk/assembly-wsagent-server</outputDirectory>
+            <directory>${project.parent.basedir}/e2cloud-assembly-wsagent-server</directory>
+            <outputDirectory>sdk/e2cloud-assembly-wsagent-server</outputDirectory>
             <excludes>
             <exclude>**/target/**</exclude>
             </excludes>
@@ -190,8 +190,8 @@
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>${project.parent.basedir}/assembly-main</directory>
-            <outputDirectory>sdk/assembly-main</outputDirectory>
+            <directory>${project.parent.basedir}/e2cloud-assembly-main</directory>
+            <outputDirectory>sdk/e2cloud-assembly-main</outputDirectory>
             <excludes>
             <exclude>**/target/**</exclude>
             </excludes>
