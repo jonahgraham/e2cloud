@@ -18,23 +18,23 @@
         <groupId>com.renesas.e2cloud</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>e2cloud-assembly-main</artifactId>
+    <artifactId>assembly-main</artifactId>
     <packaging>pom</packaging>
     <name>e2cloud IDE :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
             <groupId>com.renesas.e2cloud</groupId>
-            <artifactId>e2cloud-assembly-ide-war</artifactId>
+            <artifactId>assembly-ide-war</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>com.renesas.e2cloud</groupId>
-            <artifactId>e2cloud-assembly-wsagent-server</artifactId>
+            <artifactId>assembly-wsagent-server</artifactId>
             <type>tar.gz</type>
         </dependency>
         <dependency>
             <groupId>com.renesas.e2cloud</groupId>
-            <artifactId>e2cloud-assembly-wsmaster-war</artifactId>
+            <artifactId>assembly-wsmaster-war</artifactId>
             <type>war</type>
         </dependency>
         <dependency>

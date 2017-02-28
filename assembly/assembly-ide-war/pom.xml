@@ -18,7 +18,7 @@
         <groupId>com.renesas.e2cloud</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>e2cloud-assembly-ide-war</artifactId>
+    <artifactId>assembly-ide-war</artifactId>
     <packaging>war</packaging>
     <name>e2cloud IDE :: Compiling GWT Application</name>
     <properties>
