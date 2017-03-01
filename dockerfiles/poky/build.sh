@@ -5,7 +5,7 @@
 # which accompanies this distribution, and is available at
 # http://www.eclipse.org/legal/epl-v10.html
 
-IMAGE_NAME="renesas/poky"
+IMAGE_NAME="jonahkichwacoders/poky"
 . $(cd "$(dirname "$0")"; pwd)/../build.include
 
 POKY_SH=poky-glibc-x86_64-core-image-weston-sdk-cortexa15hf-vfp-neon-toolchain-2.0.1.sh
