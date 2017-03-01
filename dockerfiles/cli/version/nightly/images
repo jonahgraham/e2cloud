@@ -1,3 +1,3 @@
-IMAGE_INIT=codenvy/artik-init:nightly
-IMAGE_ARTIK=codenvy/artik-server:nightly
+IMAGE_INIT=jonahkichwacoders/e2cloud-init:nightly
+IMAGE_E2CLOUD=jonahkichwacoders/e2cloud-server:nightly
 IMAGE_COMPOSE=docker/compose:1.8.1

@@ -5,12 +5,12 @@
 # http://www.eclipse.org/legal/epl-v10.html
 #
 # build:
-#   docker build -t codenvy/artik-cli .
+#   docker build -t jonahkichwacoders/e2cloud-cli .
 #
 # use:
-#    docker run -v $(pwd):/artik codenvy/artik-cli [command]
+#    docker run -v $(pwd):/e2cloud jonahkichwacoders/e2cloud-cli [command]
 
-FROM eclipse/che-base:nightly
+FROM eclipse/che-base:5.3.1
 
 COPY scripts /scripts/
 COPY version /version/

@@ -17,7 +17,7 @@ pre_init() {
   CHE_ASSEMBLY_IN_REPO_MODULE_NAME="assembly/assembly-main"
   CHE_ASSEMBLY_IN_REPO="${CHE_ASSEMBLY_IN_REPO_MODULE_NAME}/target/e2cloud-ide-*/e2cloud-ide-*"
   CHE_SERVER_CONTAINER_NAME="e2cloud"
-  CHE_IMAGE_FULLNAME="codenvy/e2cloud-cli"
+  CHE_IMAGE_FULLNAME="jonahkichwacoders/e2cloud-cli"
   DEFAULT_E2CLOUD_PORT=8080
   DEFAULT_CHE_PORT=8080
 

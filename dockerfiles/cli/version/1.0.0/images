@@ -1,2 +1,2 @@
-IMAGE_INIT=codenvy/artik-init:1.5.0
-IMAGE_ARTIK=codenvy/artik-server:1.5.0
+IMAGE_INIT=jonahkichwacoders/e2cloud-init:1.0.0
+IMAGE_E2CLOUD=jonahkichwacoders/e2cloud-server:1.0.0
