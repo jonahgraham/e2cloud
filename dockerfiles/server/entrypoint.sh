@@ -211,7 +211,7 @@ init() {
     export CHE_HOME="/assembly"
   else
     echo "Using embedded assembly..."
-    export CHE_HOME=$(echo /home/user/artik-ide-*)
+    export CHE_HOME=$(echo /home/user/e2cloud-*)
   fi
 
   ### Are we using the included assembly or did user provide their own?
