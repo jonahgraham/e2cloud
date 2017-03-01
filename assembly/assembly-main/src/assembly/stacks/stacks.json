@@ -51,6 +51,11 @@
           "commandLine": "make -C ${current.project.path}",
           "name": "make",
           "type": "custom"
+        },
+        {
+          "commandLine": "make -C ${current.project.path} clean",
+          "name": "make clean",
+          "type": "custom"
         }
       ]
     },
