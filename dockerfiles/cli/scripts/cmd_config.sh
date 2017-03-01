@@ -8,9 +8,9 @@
 # Runs puppet image to generate ${CHE_FORMAL_PRODUCT_NAME} configuration
 generate_configuration_with_puppet() {
   if is_docker_for_windows; then
-    ARTIK_ENV_FILE=$(convert_posix_to_windows "${CHE_HOST_INSTANCE}/config/$CHE_MINI_PRODUCT_NAME.env")
+    E2CLOUD_ENV_FILE=$(convert_posix_to_windows "${CHE_HOST_INSTANCE}/config/$CHE_MINI_PRODUCT_NAME.env")
   else
-    ARTIK_ENV_FILE="${CHE_HOST_INSTANCE}/config/$CHE_MINI_PRODUCT_NAME.env"
+    E2CLOUD_ENV_FILE="${CHE_HOST_INSTANCE}/config/$CHE_MINI_PRODUCT_NAME.env"
   fi
 
   if debug_server; then
@@ -58,7 +58,7 @@ generate_configuration_with_puppet() {
                   --env-file=/version/$CHE_VERSION/images \
                   -v \"${CHE_HOST_INSTANCE}\":/opt/${CHE_MINI_PRODUCT_NAME}:rw \
                   ${WRITE_PARAMETERS} \
-                  -e \"ARTIK_ENV_FILE=${ARTIK_ENV_FILE}\" \
+                  -e \"E2CLOUD_ENV_FILE=${E2CLOUD_ENV_FILE}\" \
                   -e \"CHE_CONTAINER_ROOT=${CHE_CONTAINER_ROOT}\" \
                   -e \"CHE_ENVIRONMENT=${CHE_ENVIRONMENT}\" \
                   -e \"CHE_CONFIG=${CHE_HOST_INSTANCE}\" \
