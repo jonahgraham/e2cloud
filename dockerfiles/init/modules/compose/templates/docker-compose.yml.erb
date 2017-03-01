@@ -3,26 +3,26 @@
 # PLEASE DON'T MODIFY BY HAND
 # ###################################
 
-artik:
-  image: <%= ENV["IMAGE_ARTIK"] %>
+e2cloud:
+  image: <%= ENV["IMAGE_E2CLOUD"] %>
   env_file:
 <% if @compose_file_for_containers == true -%>
-    - '/data/instance/config/artik.env'
+    - '/data/instance/config/e2cloud.env'
 <% else -%>
-    - '<%= ENV["ARTIK_ENV_FILE"] %>'
+    - '<%= ENV["E2CLOUD_ENV_FILE"] %>'
 <% end -%>
   volumes:
     - '/var/run/docker.sock:/var/run/docker.sock'
-    - '<%= scope.lookupvar('artik::che_instance') -%>/data:/data'
-    - '<%= scope.lookupvar('artik::che_instance') -%>/logs:/logs'
-    - '<%= scope.lookupvar('artik::che_instance') -%>/config:/conf'
-<% if scope.lookupvar('artik::che_dev_env') == 'on' -%>
-    - '<%= scope.lookupvar('artik::che_assembly') -%>:/assembly'
+    - '<%= scope.lookupvar('e2cloud::che_instance') -%>/data:/data'
+    - '<%= scope.lookupvar('e2cloud::che_instance') -%>/logs:/logs'
+    - '<%= scope.lookupvar('e2cloud::che_instance') -%>/config:/conf'
+<% if scope.lookupvar('e2cloud::che_dev_env') == 'on' -%>
+    - '<%= scope.lookupvar('e2cloud::che_assembly') -%>:/assembly'
 <% end -%>
   ports:
-    - '<%= scope.lookupvar('artik::che_port') -%>:<%= scope.lookupvar('artik::che_port') -%>'
-<% if scope.lookupvar('artik::che_env') == 'development' -%>
-    - '<%= scope.lookupvar('artik::che_debug_port') -%>:<%= scope.lookupvar('artik::che_debug_port') -%>'
+    - '<%= scope.lookupvar('e2cloud::che_port') -%>:<%= scope.lookupvar('e2cloud::che_port') -%>'
+<% if scope.lookupvar('e2cloud::che_env') == 'development' -%>
+    - '<%= scope.lookupvar('e2cloud::che_debug_port') -%>:<%= scope.lookupvar('e2cloud::che_debug_port') -%>'
 <% end -%>
   restart: always
-  container_name: artik
+  container_name: e2cloud
