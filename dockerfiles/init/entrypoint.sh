@@ -11,7 +11,7 @@
 
 cp -rf /files/docs /copy
 
-# do not copy artik.env if exist
-if [ ! -f  /copy/artik.env ]; then
-    cp /etc/puppet/manifests/artik.env /copy
+# do not copy e2cloud.env if exist
+if [ ! -f  /copy/e2cloud.env ]; then
+    cp /etc/puppet/manifests/e2cloud.env /copy
 fi

@@ -8,13 +8,13 @@
 # Initializes an empty directory with the templates needed to configure and run Che.
 #
 # build:
-#   docker build -t codenvy/artik-init:<version> .
+#   docker build -t jonahkichwacoders/e2cloud-init:<version> .
 #
 # use (to copy files onto folder):
-#   docker run -v $(pwd):/artik codenvy/artik-init:<version>
+#   docker run -v $(pwd):/e2cloud jonahkichwacoders/e2cloud-init:<version>
 #
 # use (to run puppet config):
-#   docker run <puppet-mounts> --entrypoint=/usr/bin/puppet codenvy/artik-init:<version> apply <puppet-apply-options>
+#   docker run <puppet-mounts> --entrypoint=/usr/bin/puppet jonahkichwacoders/e2cloud-init:<version> apply <puppet-apply-options>
 
 FROM puppet/puppet-agent-alpine:4.6.2
 
