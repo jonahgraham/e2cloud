@@ -28,4 +28,4 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 EXPOSE 8000 8080
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-ADD artik-ide.tar.gz /home/user/
+ADD e2cloud.tar.gz /home/user/
