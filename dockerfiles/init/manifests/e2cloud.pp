@@ -1,6 +1,6 @@
 node default {
 ##################################################################################################
-  $che_ip = getValue("ARTIK_HOST", "localhost")
+  $che_ip = getValue("E2CLOUD_HOST", "localhost")
   $che_port = getValue("CHE_PORT", "8080")
   $che_version = getValue("CHE_VERSION","nightly")
   $che_instance = getValue("CHE_INSTANCE","/tmp/che")
