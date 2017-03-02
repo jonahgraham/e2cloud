@@ -9,7 +9,7 @@ e2cloud:
 <% if @compose_file_for_containers == true -%>
     - '/data/instance/config/e2cloud.env'
 <% else -%>
-    - '<%= ENV["E2CLOUD_ENV_FILE"] %>'
+    - '<%= ENV["CHE_ENV_FILE"] %>'
 <% end -%>
   volumes:
     - '/var/run/docker.sock:/var/run/docker.sock'
