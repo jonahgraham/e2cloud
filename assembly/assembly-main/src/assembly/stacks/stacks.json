@@ -60,8 +60,84 @@
       ]
     },
     "stackIcon": {
-      "name": "type-artik.svg",
+      "name": "type-blank.svg",
+      "mediaType": "image/svg+xml"
+    }
+  },
+  {
+    "id": "renesas-poky-linaro-gnueabi-qemu",
+    "creator": "renesas",
+    "name": "Renesas RZG with Qemu",
+    "description": "Renesas RZG Stack with the Qemu simulator",
+    "scope": "general",
+    "tags": [
+      "renesas",
+      "rzg",
+      "gcc",
+      "arm",
+      "qemu",
+      "simulator"
+    ],
+    "components": [
+      {
+        "version": "5.2.1",
+        "name": "arm-poky-linux-gnueabi-gcc"
+      },
+      {
+        "version": "2.4.0",
+        "name": "qemu-arm"
+      }
+    ],
+    "source": {
+      "type": "image",
+      "origin": "jonahkichwacoders/poky-qemu"
+    },
+    "workspaceConfig": {
+      "environments": {
+        "default": {
+          "machines": {
+            "dev-machine": {
+              "agents": [
+                "org.eclipse.che.terminal",
+                "org.eclipse.che.ws-agent",
+                "org.eclipse.che.ssh"
+              ],
+              "servers": {},
+              "attributes": {
+                "memoryLimitBytes": "2147483648"
+              }
+            }
+          },
+          "recipe": {
+            "location": "jonahkichwacoders/poky-qemu",
+            "type": "dockerimage"
+          }
+        }
+      },
+      "name": "default",
+      "defaultEnv": "default",
+      "description": null,
+      "commands": [
+        {
+          "commandLine": "make -C ${current.project.path}",
+          "name": "make",
+          "type": "custom"
+        },
+        {
+          "commandLine": "make -C ${current.project.path} clean",
+          "name": "make clean",
+          "type": "custom"
+        },
+        {
+          "commandLine": "qemu-arm ${current.project.path}/a.out",
+          "name": "simulate on qemu",
+          "type": "custom"
+        }
+      ]
+    },
+    "stackIcon": {
+      "name": "type-blank.svg",
       "mediaType": "image/svg+xml"
     }
   }
- ]
+]
