@@ -32,7 +32,7 @@
   {
     "name": "blinky",
     "displayName": "Blinky Example",
-    "path": "/console-c-simple",
+    "path": "/blinky",
     "description": "The classic LED blinking program",
     "projectType": "c",
     "mixins": [],
@@ -45,7 +45,7 @@
     "problems": [],
     "source": {
       "type": "git",
-      "location": "https://github.com/jonahkichwacoders/e2cloud-sample-console-c-simple.git",
+      "location": "https://github.com/jonahkichwacoders/e2cloud-sample-blinky.git",
       "parameters": {}
     },
     "commands": [
@@ -62,7 +62,7 @@
   {
     "name": "GStreamer-Camera-Capture-Example",
     "displayName": "GStreamer Camera Capture Example",
-    "path": "/console-c-simple",
+    "path": "/cam-cap",
     "description": "Demonstrate connecting RZG to to a camera and capture results.",
     "projectType": "c",
     "mixins": [],
@@ -75,7 +75,7 @@
     "problems": [],
     "source": {
       "type": "git",
-      "location": "https://github.com/jonahkichwacoders/e2cloud-sample-console-c-simple.git",
+      "location": "https://github.com/jonahkichwacoders/e2cloud-sample-cam-cap.git",
       "parameters": {}
     },
     "commands": [
