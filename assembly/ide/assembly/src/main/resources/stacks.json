@@ -1,30 +1,25 @@
 [
   {
-    "id": "custom-java-mysql",
-    "creator": "ide",
-    "name": "Custom Java-MySQL",
-    "description": "Multi-machine environment with Default Java Stack and MySQL database",
+    "id": "renesas-poky-linaro-gnueabi",
+    "creator": "renesas",
+    "name": "Renesas RZG",
+    "description": "Renesas RZG Stack",
     "scope": "general",
     "tags": [
-      "Java 1.8, Tomcat 8, MySQL 5.7"
+      "renesas",
+      "rzg",
+      "gcc",
+      "arm"
     ],
     "components": [
       {
-        "name": "JDK",
-        "version": "1.8.0_45"
-      },
-      {
-        "name": "Maven",
-        "version": "3.2.2"
-      },
-      {
-        "name": "Tomcat",
-        "version": "8.0.24"
+        "version": "5.2.1",
+        "name": "arm-poky-linux-gnueabi-gcc"
       }
     ],
     "source": {
       "type": "image",
-      "origin": "eclipse/ubuntu_jdk8"
+      "origin": "jonahkichwacoders/poky"
     },
     "workspaceConfig": {
       "environments": {
@@ -32,27 +27,19 @@
           "machines": {
             "dev-machine": {
               "agents": [
-                "org.eclipse.che.exec",
                 "org.eclipse.che.terminal",
                 "org.eclipse.che.ws-agent",
                 "org.eclipse.che.ssh"
               ],
               "servers": {},
-              "attributes": {}
-            },
-            "db": {
-              "agents": [
-                "org.eclipse.che.exec",
-                "org.eclipse.che.terminal"
-              ],
-              "servers": {},
-              "attributes": {}
+              "attributes": {
+                "memoryLimitBytes": "2147483648"
+              }
             }
           },
           "recipe": {
-            "content": "services:\n db:\n  image: eclipse/mysql\n  environment:\n   MYSQL_ROOT_PASSWORD: password\n   MYSQL_DATABASE: petclinic\n   MYSQL_USER: petclinic\n   MYSQL_PASSWORD: password\n  mem_limit: 1073741824\n dev-machine:\n  image: eclipse/ubuntu_jdk8\n  mem_limit: 2147483648\n  depends_on:\n    - db",
-            "contentType": "application/x-yaml",
-            "type": "compose"
+            "location": "jonahkichwacoders/poky",
+            "type": "dockerimage"
           }
         }
       },
@@ -61,14 +48,95 @@
       "description": null,
       "commands": [
         {
-          "commandLine": "mysql -u $MYSQL_USER -p$MYSQL_PASSWORD -e 'show databases;'",
-          "name": "show databases",
+          "commandLine": "make -C ${current.project.path}",
+          "name": "make",
+          "type": "custom"
+        },
+        {
+          "commandLine": "make -C ${current.project.path} clean",
+          "name": "make clean",
           "type": "custom"
         }
       ]
     },
     "stackIcon": {
-      "name": "type-java-mysql.svg",
+      "name": "type-blank.svg",
+      "mediaType": "image/svg+xml"
+    }
+  },
+  {
+    "id": "renesas-poky-linaro-gnueabi-qemu",
+    "creator": "renesas",
+    "name": "Renesas RZG with Qemu",
+    "description": "Renesas RZG Stack with the Qemu simulator",
+    "scope": "general",
+    "tags": [
+      "renesas",
+      "rzg",
+      "gcc",
+      "arm",
+      "qemu",
+      "simulator"
+    ],
+    "components": [
+      {
+        "version": "5.2.1",
+        "name": "arm-poky-linux-gnueabi-gcc"
+      },
+      {
+        "version": "2.4.0",
+        "name": "qemu-arm"
+      }
+    ],
+    "source": {
+      "type": "image",
+      "origin": "jonahkichwacoders/poky-qemu"
+    },
+    "workspaceConfig": {
+      "environments": {
+        "default": {
+          "machines": {
+            "dev-machine": {
+              "agents": [
+                "org.eclipse.che.terminal",
+                "org.eclipse.che.ws-agent",
+                "org.eclipse.che.ssh"
+              ],
+              "servers": {},
+              "attributes": {
+                "memoryLimitBytes": "2147483648"
+              }
+            }
+          },
+          "recipe": {
+            "location": "jonahkichwacoders/poky-qemu",
+            "type": "dockerimage"
+          }
+        }
+      },
+      "name": "default",
+      "defaultEnv": "default",
+      "description": null,
+      "commands": [
+        {
+          "commandLine": "make -C ${current.project.path}",
+          "name": "make",
+          "type": "custom"
+        },
+        {
+          "commandLine": "make -C ${current.project.path} clean",
+          "name": "make clean",
+          "type": "custom"
+        },
+        {
+          "commandLine": "qemu-arm ${current.project.path}/a.out",
+          "name": "simulate on qemu",
+          "type": "custom"
+        }
+      ]
+    },
+    "stackIcon": {
+      "name": "type-blank.svg",
       "mediaType": "image/svg+xml"
     }
   }
