@@ -15,10 +15,10 @@
         <version>5.14.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>che-stacks-sample-parent</artifactId>
+    <artifactId>che-ide-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Stacks Sample :: IDE :: Parent</name>
+    <name>IDE :: Parent</name>
   <modules>
-    <module>assembly</module>
+    <module>stacks</module>
   </modules>
 </project>

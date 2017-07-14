@@ -13,7 +13,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>che-stacks-sample-parent</artifactId>
+        <artifactId>che-ide-parent</artifactId>
         <groupId>com.renesas.e2cloud</groupId>
         <version>5.14.0</version>
     </parent>
