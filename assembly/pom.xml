@@ -35,7 +35,12 @@
         <dependencies>
             <dependency>
                 <groupId>com.renesas.e2cloud</groupId>
-                <artifactId>che-stacks-sample</artifactId>
+                <artifactId>che-samples</artifactId>
+                <version>5.14.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.renesas.e2cloud</groupId>
+                <artifactId>che-stacks</artifactId>
                 <version>5.14.0</version>
             </dependency>
             <dependency>

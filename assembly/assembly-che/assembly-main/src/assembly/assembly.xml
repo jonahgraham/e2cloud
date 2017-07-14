@@ -46,6 +46,7 @@
             <outputDirectory></outputDirectory>
             <excludes>
                 <exclude>**/tomcat/webapps/wsmaster.war</exclude>
+                <exclude>templates/**</exclude>
             </excludes>
         </fileSet>
     </fileSets>

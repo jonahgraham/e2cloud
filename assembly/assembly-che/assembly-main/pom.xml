@@ -25,6 +25,11 @@
             <artifactId>assembly-wsmaster-war</artifactId>
             <type>war</type>
         </dependency>
+        <dependency>
+            <groupId>com.renesas.e2cloud</groupId>
+            <artifactId>che-samples</artifactId>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

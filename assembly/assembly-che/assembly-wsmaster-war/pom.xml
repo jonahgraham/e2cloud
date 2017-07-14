@@ -28,7 +28,7 @@
         </dependency>
         <dependency>
             <groupId>com.renesas.e2cloud</groupId>
-            <artifactId>che-stacks-sample</artifactId>
+            <artifactId>che-stacks</artifactId>
         </dependency>
     </dependencies>
     <build>
