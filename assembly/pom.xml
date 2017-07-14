@@ -143,6 +143,6 @@
   <modules>
     <module>ide</module>
     <module>assembly-che</module>
-    <module>assembly-codenvy</module>
+    <!-- module>assembly-codenvy</module-->
   </modules>
 </project>

@@ -30,6 +30,11 @@
             <artifactId>che-samples</artifactId>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.che.dashboard</groupId>
+            <artifactId>che-dashboard-war</artifactId>
+            <type>war</type>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

@@ -17,5 +17,5 @@
         <groupId>com.renesas.e2cloud</groupId>
         <version>5.14.0</version>
     </parent>
-    <artifactId>che-samples</artifactId>
+    <artifactId>che-branding</artifactId>
 </project>
