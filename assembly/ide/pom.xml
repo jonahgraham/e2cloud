@@ -18,6 +18,7 @@
     <artifactId>che-ide-parent</artifactId>
     <packaging>pom</packaging>
   <modules>
+    <module>branding</module>
     <module>samples</module>
     <module>stacks</module>
   </modules>
