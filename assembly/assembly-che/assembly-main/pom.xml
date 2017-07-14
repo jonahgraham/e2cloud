@@ -27,6 +27,11 @@
         </dependency>
         <dependency>
             <groupId>com.renesas.e2cloud</groupId>
+            <artifactId>che-branding</artifactId>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.renesas.e2cloud</groupId>
             <artifactId>che-samples</artifactId>
             <type>jar</type>
         </dependency>

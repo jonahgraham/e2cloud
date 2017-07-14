@@ -42,6 +42,19 @@
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
             <unpack>true</unpack>
+            <outputDirectory>tomcat/webapps/dashboard/assets/branding</outputDirectory>
+            <includes>
+                <include>com.renesas.e2cloud:che-branding</include>
+            </includes>
+            <unpackOptions>
+                <excludes>
+                    <exclude>META-INF/**</exclude>
+                </excludes>
+            </unpackOptions>
+        </dependencySet>
+        <dependencySet>
+            <useProjectArtifact>false</useProjectArtifact>
+            <unpack>true</unpack>
             <outputDirectory>templates</outputDirectory>
             <includes>
                 <include>com.renesas.e2cloud:che-samples</include>
