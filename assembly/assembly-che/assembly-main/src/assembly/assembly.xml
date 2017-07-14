@@ -28,6 +28,20 @@
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
             <unpack>true</unpack>
+            <outputDirectory>tomcat/webapps/dashboard</outputDirectory>
+            <outputFileNameMapping>dashboard.war</outputFileNameMapping>
+            <includes>
+                <include>org.eclipse.che.dashboard:che-dashboard-war</include>
+            </includes>
+            <unpackOptions>
+                <excludes>
+                    <exclude>assets/branding/**</exclude>
+                </excludes>
+            </unpackOptions>
+        </dependencySet>
+        <dependencySet>
+            <useProjectArtifact>false</useProjectArtifact>
+            <unpack>true</unpack>
             <outputDirectory>templates</outputDirectory>
             <includes>
                 <include>com.renesas.e2cloud:che-samples</include>
